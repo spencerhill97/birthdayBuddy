@@ -1,14 +1,13 @@
-import data from "../data";
 import Person from "./Person";
 
-function List() {
+function List({ people }) {
   return (
     <ul>
-      {data.map((person) => {
+      {people.map((person) => {
         const { id, image, name, age } = person;
         return (
           <li key={id}>
-            <Person image={image} name={name} age={age} />
+            <Person key={id} image={image} name={name} age={age} />
           </li>
         );
       })}

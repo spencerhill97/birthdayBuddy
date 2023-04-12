@@ -1,11 +1,16 @@
-function Person({ id, name, age, image }) {
+function Person({ name, age, image }) {
   return (
-    <ul key={id}>
+    <ul className="person">
       <li>
-        <img src={image} style={{ maxWidth: "80px" }} alt={name} />
+        <img
+          src={image}
+          style={{ maxWidth: "80px" }}
+          alt={name}
+          className="img"
+        />
       </li>
       <li>{name}</li>
-      <li>{age}</li>
+      <li>{age} years</li>
     </ul>
   );
 }
